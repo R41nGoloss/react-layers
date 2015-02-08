@@ -16,9 +16,8 @@ var Layer = React.createClass({
     // Extract out props used by this component.
     // TODO: swap out to use ES6-7 spread operator when possible
     // @see https://gist.github.com/sebmarkbage/a6e220b7097eb3c79ab7
-    // var {container, layer, ...props} = this.props;
-    // return <div {...props}>{this.props.children}</div>;
-    return this.transferPropsTo(React.DOM.div({container: null, layer: null}, this.props.children));
+    var {container, layer, ...props} = this.props;
+    return <div {...props}>{this.props.children}</div>;
   },
 
   renderLayer: function() {

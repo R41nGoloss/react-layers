@@ -114,14 +114,14 @@ describe('LayerMixin', function() {
 
     var container = document.createElement('div');
     var holderContainer = document.createElement('div');
-    React.renderComponent(
+    React.render(
       <LayerHolder container={container} layer={<Layer />} />,
       holderContainer
     );
     expect(didMountSpy).toHaveBeenCalled();
     expect(willUnmountSpy).not.toHaveBeenCalled();
 
-    React.renderComponent(
+    React.render(
       <LayerHolder container={container} layer={null} />,
       holderContainer
     );
@@ -146,7 +146,7 @@ describe('LayerMixin', function() {
 
     var container = document.createElement('div');
     var holderContainer = document.createElement('div');
-    React.renderComponent(
+    React.render(
       <LayerHolder container={container} layer={<Layer />} />,
       holderContainer
     );
@@ -175,7 +175,7 @@ describe('LayerMixin', function() {
 
     var container = document.createElement('div');
     var holderContainer = document.createElement('div');
-    React.renderComponent(
+    React.render(
       <LayerHolder container={container} layer={<Layer />} />,
       holderContainer
     );
@@ -183,7 +183,7 @@ describe('LayerMixin', function() {
     expect(willUnmountSpy).not.toHaveBeenCalled();
 
     var newContainer = document.createElement('div');
-    React.renderComponent(
+    React.render(
       <LayerHolder container={newContainer} layer={<Layer />} />,
       holderContainer
     );

@@ -17,9 +17,8 @@ var Portal = React.createClass({
     // Extract out props used by this component.
     // TODO: swap out to use ES6-7 spread operator when possible
     // @see https://gist.github.com/sebmarkbage/a6e220b7097eb3c79ab7
-    // var {container, ...props} = this.props;
-    // return <div {...props}>{this.props.children}</div>;
-    return cloneWithProps(React.DOM.div({container: null}, this.props.children), this.props);
+    var {container, ...props} = this.props;
+    return <div {...props}>{this.props.children}</div>;
   }
 });
 

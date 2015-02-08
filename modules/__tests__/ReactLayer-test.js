@@ -20,11 +20,11 @@ describe('ReactLayer', function() {
 
     var fakeDescriptor = {};
     layer.render(fakeDescriptor);
-    expect(React.renderComponent).not.toBeCalled();
+    expect(React.render).not.toBeCalled();
 
     var el = document.createElement('div');
     layer.setContainer(el);
-    expect(React.renderComponent).toBeCalledWith(fakeDescriptor, el);
+    expect(React.render).toBeCalledWith(fakeDescriptor, el);
   });
 
   it('should render with container', function() {
@@ -36,7 +36,7 @@ describe('ReactLayer', function() {
 
     var fakeDescriptor = {};
     layer.render(fakeDescriptor);
-    expect(React.renderComponent).toBeCalledWith(fakeDescriptor, el);
+    expect(React.render).toBeCalledWith(fakeDescriptor, el);
   });
 
   it('should release container', function() {
