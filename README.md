@@ -1,4 +1,4 @@
-React Layers [![Build Status](https://travis-ci.org/R41nGoloss/react-layers.svg?branch=master)](https://travis-ci.org/pieterv/react-layers)
+React Layers [![Build Status](https://travis-ci.org/R41nGoloss/react-layers.svg?branch=master)](https://travis-ci.org/R41nGoloss/react-layers)
 ============
 
 A library for layering components in React.
